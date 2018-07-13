@@ -13,7 +13,7 @@ class App < Sinatra::Base
   end
 
   get '/say/:number/:phrase' do
-    @product = params[:number].size * params[:phrase]
+    @product = params[:number].to_i.size * params[:phrase]
     "#{@product}"
   end
 end
